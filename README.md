@@ -30,11 +30,11 @@ Es un software donde se almacenan archivos de una página web, el cual tiene com
 
 #### ¿Qué son los verbos HTTP? Mencionar los más conocidos
 Son las palabras clave que el cliente utiliza para realizar una acción. Entre las más comunes encontramos:
--Get: Se usa para obtener un recurso indicado. En donde al haber diferentes peticiones arrojan el mismo resultado.  
--Delete: Elimina el recurso identificado mediante el URL.
--Post: Se utiliza para crear nuevos recursos.
--Put: El recurso recibe una actualización y/o en caso de no existir crea uno nuevo.
--Patch: Permite la actualización parcial del recurso en donde se indica que operación se quiere realizar.
+- Get: Se usa para obtener un recurso indicado. En donde al haber diferentes peticiones arrojan el mismo resultado.  
+- Delete: Elimina el recurso identificado mediante el URL.
+- Post: Se utiliza para crear nuevos recursos.
+- Put: El recurso recibe una actualización y/o en caso de no existir crea uno nuevo.
+- Patch: Permite la actualización parcial del recurso en donde se indica que operación se quiere realizar.
 
 #### ¿Qué es un request y un response en una comunicación HTTP?
 Un request es la petición que el usuario hace a un servidor para solicitar una acción especifica, por ejemplo, solicitar una pagina web, una herramienta, etc. Y un response es la respuesta que el servidor envía al usuario para resolver su solicitud.
