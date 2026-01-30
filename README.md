@@ -145,14 +145,14 @@ Las relaciones se representan en un diagrama UML realizado en Draw.io, el cual s
 Es un registro en donde el cliente ha mostrado interés en un producto o servicio de la empresa. Esta diseñado para gestionar a los prospectos desde su primera interacción con la marca hasta que se convierten en clientes.
 
 **¿Qué datos almacena?**
-•	Nombre completo 
-•	Información de contacto
-•	Ubicación
-•	Origen del lead 
-•	Estado del lead
-•	Propietario del lead 
-•	Fecha de creación y última modificación
-•	Notas adicionales y campos personalizados 
+-	Nombre completo 
+-	Información de contacto
+-	Ubicación
+-	Origen del lead 
+- Estado del lead
+- Propietario del lead 
+-	Fecha de creación y última modificación
+-	Notas adicionales y campos personalizados 
 
 **¿Con cuáles se relaciona?**
 Tiene relación indirecta con: 
