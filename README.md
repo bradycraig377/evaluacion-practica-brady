@@ -388,3 +388,24 @@ Permite a las organizaciones crear, organizar y distribuir contenido de conocimi
 El siguiente diagrama representa visualmente las relaciones entre los objetos estándar documentados anteriormente.
 
 ![Diagrama Salesforce](imagenes/diagrama-salesforce.png)
+
+## Ejercicio 7 - Integración REST y actualización de Contact
+
+### A. Consulta de ID desde Web Service
+
+Se realizó una petición **GET** utilizando Postman al servicio REST proporcionado:
+
+https://procontacto-reclutamiento-default-rtdb.firebaseio.com/contacts.json
+
+La respuesta devuelve un conjunto de registros en formato JSON, donde cada contacto
+está identificado por un **ID único generado por Firebase**.  
+Este ID será utilizado para consultar un contacto específico.
+
+#### GET inicial
+![GET inicial](imagenes/get-inicial2.png)
+
+Posteriormente, se consultó un registro individual utilizando uno de los IDs obtenidos
+en la llamada anterior.  
+Ejemplo de ID utilizado:
+
+
