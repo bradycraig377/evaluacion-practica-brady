@@ -143,6 +143,7 @@ Las relaciones se representan en un diagrama UML realizado en Draw.io, el cual s
 
 #### Lead
 **¿Qué es?**
+
 Es un registro en donde el cliente ha mostrado interés en un producto o servicio de la empresa. Esta diseñado para gestionar a los prospectos desde su primera interacción con la marca hasta que se convierten en clientes.
 
 **¿Qué datos almacena?**
