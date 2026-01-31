@@ -401,7 +401,7 @@ La respuesta devuelve un conjunto de registros en formato JSON, donde cada conta
 está identificado por un **ID único generado por Firebase**.  
 Este ID será utilizado para consultar un contacto específico.
 
-**##### GET inicial (request)
+##### GET inicial (request)
 ![GET inicial request](imagenes/get-inicial2-request.png)
 
 ##### GET inicial (response)
