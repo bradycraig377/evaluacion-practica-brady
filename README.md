@@ -527,37 +527,67 @@ Salesforce no es un ERP, es un CRM, pero puede integrarse con uno.
 
 ## Ejercicio 7 - Integración REST y actualización de Contact
 
+En este ejercicio se realiza el consumo de un servicio REST utilizando Postman para obtener información de contactos desde Firebase. A partir de la respuesta obtenida, se identifica un ID único que permite consultar un contacto específico mediante una segunda petición GET.
+
 ### A. Consulta de ID desde Web Service
 
 Se realizó una petición **GET** utilizando Postman al servicio REST proporcionado:
 
-https://procontacto-reclutamiento-default-rtdb.firebaseio.com/contacts.json
-
 La respuesta devuelve un conjunto de registros en formato JSON, donde cada contacto
 está identificado por un **ID único generado por Firebase**.  
-Este ID será utilizado para consultar un contacto específico.
+
+**URL utilizada:**
+
+https://procontacto-reclutamiento-default-rtdb.firebaseio.com/contacts.json
 
 ##### GET inicial (request)
 ![GET inicial request](imagenes/get-inicial2-request.png)
 
+
 ##### GET inicial (response)
 ![GET inicial response](imagenes/get-inicial2-response.png)
 
-Posteriormente, se consultó un registro individual utilizando uno de los IDs obtenidos en la llamada anterior.
+La respuesta muestra un listado de contactos en formato JSON.
+Cada registro contiene un identificador único que será utilizado posteriormente para consultar un contacto en específico.
 
 Ejemplo de ID utilizado:
 - OjhsbYKoWnIHws2C4iZ
 
-##### GET por ID
-![GET por ID](imagenes/get-por-id.png)
+### B. Consulta de contacto por ID
+
+Posteriormente, se realizó una segunda petición **GET** utilizando uno de los IDs
+obtenidos en la llamada anterior, con el objetivo de consultar un contacto específico.
 
 **URL utilizada:**
 
-https://procontacto-reclutamiento-default-rtdb.firebaseio.com/contacts/-OjhsbYKoWnIHws2C4iZ.json
+https://procontacto-reclutamiento-default-rtdb.firebaseio.com/contacts/-OjhbsYKoWnIHws2C4iZ.json
 
-La respuesta devuelve únicamente los datos del contacto asociado al ID consultado.
+##### GET por ID
+![GET por ID](imagenes/get-por-id.png)
+
+La respuesta devuelve únicamente la información del contacto asociado al ID consultado, mostrando datos como el nombre y el correo electrónico.
 
 
+### C. Actualización de Contact mediante Trigger y consumo REST
 
+Para completar la integración, se desarrollaría un **trigger en Salesforce** que se ejecute al **crear o modificar un Contact**.
+
+Cuando el campo **idprocontacto** es completado, el trigger invoca un servicio REST externo para consultar la información del contacto utilizando dicho ID.
+
+
+El trigger realiza las siguientes acciones:
+
+- Detecta la creación o actualización de un Contact.
+- Valida que el campo **idprocontacto** tenga un valor.
+- Realiza un **callout REST** al servicio externo de Firebase.
+- Obtiene la información del contacto (correo electrónico).
+- Actualiza el campo **Email** del Contact con el dato obtenido.
+
+El servicio REST utilizado corresponde a una consulta por ID,
+agregando el identificador del contacto al final de la URL, por ejemplo:
+
+https://procontacto-reclutamiento-default-rtdb.firebaseio.com/contacts/{id}.json
+
+Para las pruebas del trigger se utilizó el **Playground 1**, empleando un ID previamente obtenido mediante Postman, lo que permitió validar el correcto consumo del servicio REST y la actualización del campo de correo electrónico.
 
 
