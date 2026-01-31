@@ -49,10 +49,10 @@ Son diferentes parámetros en una URL, las cuales se encuentran después de un s
 El responsecode son mensajes que los servidores web da al usuario cuando se procesa una solicitud y da un mensaje dependiendo el caso (si la solicitud fue exitosa, si hay un error o si se debe realizar alguna acción extra).
 Los valores principales son:
 - 1xx: Significa que la solicitud fue recibida y sigue el proceso.
--2xx: La solicitud fue recibida y aceptada correctamente.
--3xx: El usuario debe realizar algún cambio adicional para poder completar la solicitud.
--4xx: Hay un error en la solicitud por parte del usuario y no puede ser procesada.
--5xx: Hay un error en el servidor y por consecuencia no es posible cumplir con la solicitud.
+- 2xx: La solicitud fue recibida y aceptada correctamente.
+- 3xx: El usuario debe realizar algún cambio adicional para poder completar la solicitud.
+- 4xx: Hay un error en la solicitud por parte del usuario y no puede ser procesada.
+- 5xx: Hay un error en el servidor y por consecuencia no es posible cumplir con la solicitud.
 
 #### ¿Cómo se envía la data en un Get y cómo en un POST?
 La data en un Get envía los datos del cliente al servidor agregándolos como parámetros de consulta en la URL, con este método los datos enviados son escritos después del signo de interrogación en la URL.
@@ -74,6 +74,7 @@ Ejemplo JSON:
 }
 
 Y la estructura XML es una forma de organizar y representar en un lenguaje diseñado para almacenar, transportar y recibir datos de manera legible.
+
 Ejemplo XML:
 <usuario>
   <id>1</id>
