@@ -64,7 +64,9 @@ El verbo GET ya que, al introducir una URL en el navegador, envía una solicitud
 #### Explicar brevemente qué son las estructuras de datos JSON y XML dando ejemplo de estructuras posibles.
 La estructura de datos JSON es un formato que se utiliza para la especificación de datos en las aplicaciones o sitios web y destaca por el intercambio de datos entre sistemas informáticos. 
 
-Ejemplo JSON:
+**Ejemplo JSON:**
+
+```json
 {
   "usuario": {
     "id": 1,
@@ -73,14 +75,21 @@ Ejemplo JSON:
   }
 }
 
+```
+
 Y la estructura XML es una forma de organizar y representar en un lenguaje diseñado para almacenar, transportar y recibir datos de manera legible.
 
-Ejemplo XML:
+**Ejemplo XML:**
+
+```xml
+
 <usuario>
   <id>1</id>
   <nombre>Brady</nombre>
   <correo>brady@email.com</correo>
 </usuario>
+
+```
 
 #### Explicar brevemente el estándar SOAP
 Es un protocolo que se utiliza para el intercambio de mensajes entre sistemas y tiene como objetivo facilitar la comunicación con distintas plataformas, lenguajes o sistemas operativos.
