@@ -157,68 +157,68 @@ Es un registro en donde el cliente ha mostrado interés en un producto o servici
 
 **¿Con cuáles se relaciona?**
 Tiene relación indirecta con: 
-• Account: Durante la conversión, el lead se transforma en una cuenta (empresa). 
-•	Contact: Los datos personales del lead se convierten en un contacto. 
-•	Opportunity: Si se configura, se puede crear una oportunidad de venta asociada al proceso de conversión. 
+- Account: Durante la conversión, el lead se transforma en una cuenta (empresa). 
+-	Contact: Los datos personales del lead se convierten en un contacto. 
+-	Opportunity: Si se configura, se puede crear una oportunidad de venta asociada al proceso de conversión. 
 
 #### Account
 **¿Qué es?**
 Es el objeto que representa una cuenta individual, ya sea de una organización, cliente, competidor o socio. Ayuda a gestionar las entidades dentro de la plataforma.
 
 **¿Qué datos almacena?**
-•	Nombre de la empresa (razón social)
-•	Dirección postal
-•	Ciudad, país y código postal
-•	Teléfono principal
-•	Número de empleados
-•	Industria y tamaño de la empresa
+-	Nombre de la empresa (razón social)
+	Dirección postal
+-	Ciudad, país y código postal
+-	Teléfono principal
+-	Número de empleados
+-	Industria y tamaño de la empresa
 
 **¿Con cuáles se relaciona?**
-• Contact: Un contacto está asociado a una cuenta. 
-• Opportunity: Una oportunidad pertenece a una cuenta. 
-• Asset: Un Activo está vinculado a una cuenta. 
-• Case: Un Caso se relaciona con una cuenta.
+- Contact: Un contacto está asociado a una cuenta. 
+- Opportunity: Una oportunidad pertenece a una cuenta. 
+- Asset: Un Activo está vinculado a una cuenta. 
+- Case: Un Caso se relaciona con una cuenta.
 
 #### Contact
 **¿Qué es?**
 Es un objeto estándar que representa a personas con las que la organización tiene una relación comercial.
 **¿Qué datos almacena?**
-•	Nombre completo 
-•	Información de contacto
-•	Cargo o título 
-•	Relación con la cuenta
-•	Datos adicionales estándar
-•	Campos personalizados
+-	Nombre completo 
+-	Información de contacto
+-	Cargo o título 
+-	Relación con la cuenta
+-	Datos adicionales estándar
+-	Campos personalizados
 
 **¿Con cuáles se relaciona?**
-• Account: Cada contacto está vinculado a una cuenta mediante un campo de búsqueda.
-• Opportunity: Permite definir el rol de un contacto en una oportunidad
-• Quote: Puede estar relacionado indirectamente a través de una opportunity si la cotización está ligada a una oportunidad que incluye contactos.
-• Asset: Puede estar asociado indirectamente a un contacto y una cuenta, útil para rastrear productos vendidos.
-• Case:  Un caso se asocia a un contacto para gestionar soporte.
+- Account: Cada contacto está vinculado a una cuenta mediante un campo de búsqueda.
+- Opportunity: Permite definir el rol de un contacto en una oportunidad
+- Quote: Puede estar relacionado indirectamente a través de una opportunity si la cotización está ligada a una oportunidad que incluye contactos.
+- Asset: Puede estar asociado indirectamente a un contacto y una cuenta, útil para rastrear productos vendidos.
+- Case:  Un caso se asocia a un contacto para gestionar soporte.
 
 #### Opportunity
 **¿Qué es?**
 Es un objeto estándar que representa una venta potencial o un trato pendiente con un cliente
 
 **¿Qué datos almacena?**
-•	Nombre de la oportunidad
-•	Monto (Amount): 
-•	Fecha de cierre (Close Date): 
-•	Etapa de la oportunidad (Stage): 
-•	Probabilidad (%): 
-•	Tipo (Type): 
-•	Fuente de la oportunidad (Lead Source): 
-•	Cuenta relacionada (Account) 
-•	Contacto principal: 
-•	Descripción: 
+-	Nombre de la oportunidad
+-	Monto (Amount): 
+-	Fecha de cierre (Close Date): 
+-	Etapa de la oportunidad (Stage): 
+-	Probabilidad (%): 
+-	Tipo (Type): 
+-	Fuente de la oportunidad (Lead Source): 
+-	Cuenta relacionada (Account) 
+-	Contacto principal: 
+-	Descripción: 
 
 **¿Con cuáles se relaciona?**
 
-•	Account: Representa la empresa con la que se está negociando.
-•	PriceBook (Lista de precios): Solo se pueden agregar productos de ese Pricebook a la oportunidad. 
-•	Quote:   La cotización refleja los productos, precios y términos ofrecidos al cliente
-•	Product: Los productos se agregan a una oportunidad a través de Opportunity Products que representan los ítems específicos que se están vendiendo.
+-	Account: Representa la empresa con la que se está negociando.
+-	PriceBook (Lista de precios): Solo se pueden agregar productos de ese Pricebook a la oportunidad. 
+-	Quote:   La cotización refleja los productos, precios y términos ofrecidos al cliente
+-	Product: Los productos se agregan a una oportunidad a través de Opportunity Products que representan los ítems específicos que se están vendiendo.
 
 #### Product
 **¿Qué es?**
@@ -226,23 +226,23 @@ Representa los productos o servicios que una empresa vende.
 
 **¿Qué datos almacena?**
 
-•	Nombre del Producto 
-•	Código del Producto 
-•	Descripción 
-•	Precio de Lista 
-•	Unidad de Medida 
-•	Familia (Product Family) 
-•	Activo – Indica si el producto está disponible para su venta (sí/no).
-•	URL de la Imagen 
-•	Fecha de Activación/Desactivación 
+-	Nombre del Producto 
+-	Código del Producto 
+-	Descripción 
+-	Precio de Lista 
+-	Unidad de Medida 
+-	Familia (Product Family) 
+-	Activo – Indica si el producto está disponible para su venta (sí/no).
+-	URL de la Imagen 
+-	Fecha de Activación/Desactivación 
 
 **¿Con cuáles se relaciona?**
 
-• PriceBook: Define el precio de un producto en un libro de precios específico.  Es una relación de muchos a muchos.
-• Opportunity: Los productos se agregan a una oportunidad de venta.  Esta relación permite rastrear qué productos se están vendiendo y en qué cantidad. 
-• Quote: Se vincula productos con una cotización, mostrando los artículos ofertados al cliente. 
-• Asset: Esta relación ayuda en el seguimiento postventa. 
-• Case: Los casos de soporte técnico pueden estar relacionados con un Asset para gestionar incidencias sobre un artículo específico.
+- PriceBook: Define el precio de un producto en un libro de precios específico.  Es una relación de muchos a muchos.
+- Opportunity: Los productos se agregan a una oportunidad de venta.  Esta relación permite rastrear qué productos se están vendiendo y en qué cantidad. 
+- Quote: Se vincula productos con una cotización, mostrando los artículos ofertados al cliente. 
+ Asset: Esta relación ayuda en el seguimiento postventa. 
+- Case: Los casos de soporte técnico pueden estar relacionados con un Asset para gestionar incidencias sobre un artículo específico.
 
 #### PriceBook
 
@@ -251,16 +251,16 @@ Es un catálogo que contiene una lista de productos junto con sus precios asocia
 
 **¿Qué datos almacena?**
 
-• Nombre de la lista de precios 
-• Estado de activación: Indica si la lista está activa o inactiva 
-• Descripción
-• Región u otros campos personalizados
+- Nombre de la lista de precios 
+- Estado de activación: Indica si la lista está activa o inactiva 
+- Descripción
+- Región u otros campos personalizados
 
 **¿Con cuáles se relaciona?**
 
-• Product: A través del objeto PricebookEntry, que es una relación muchos-a-muchos entre Pricebook y Product. 
-• Opportunity: Se asocia con un solo Pricebook. Los productos agregados a la oportunidad deben pertenecer a ese Pricebook. 
-• Quote: Esta relacionada para asegurar precios consistentes en la propuesta.
+- Product: A través del objeto PricebookEntry, que es una relación muchos-a-muchos entre Pricebook y Product. 
+- Opportunity: Se asocia con un solo Pricebook. Los productos agregados a la oportunidad deben pertenecer a ese Pricebook. 
+- Quote: Esta relacionada para asegurar precios consistentes en la propuesta.
 
 #### Quote
 
@@ -268,21 +268,21 @@ Es un catálogo que contiene una lista de productos junto con sus precios asocia
 Es un registro que muestra los precios propuestos para productos y servicios. 
 
 **¿Qué datos almacena?**
-•	Datos generales 
-•	Relaciones clave 
-•	Detalles financieros
-•	Información de envío y facturación
-•	Productos y líneas de cotización
-•	Sincronización con oportunidades 
-•	Campos personalizados
+-	Datos generales 
+-	Relaciones clave 
+-	Detalles financieros
+-	Información de envío y facturación
+-	Productos y líneas de cotización
+-	Sincronización con oportunidades 
+-	Campos personalizados
 
 **¿Con cuáles se relaciona?**
 
-• Account: Se asocia a una cuenta (cliente). 
-• Contact: Puede estar vinculado a uno o más contactos a través de la Account u Opportunity asociada.
-• Opportunity: Se crea a partir de una Opportunity y puede marcarse como Primary Quote para sincronización.
-• Product: A través de Quote Line Items, que contienen los productos o servicios cotizados. 
-• PriceBook: Se utiliza para determinar los precios de los productos incluidos.
+- Account: Se asocia a una cuenta (cliente). 
+- Contact: Puede estar vinculado a uno o más contactos a través de la Account u Opportunity asociada.
+- Opportunity: Se crea a partir de una Opportunity y puede marcarse como Primary Quote para sincronización.
+- Product: A través de Quote Line Items, que contienen los productos o servicios cotizados. 
+- PriceBook: Se utiliza para determinar los precios de los productos incluidos.
 
 #### Asset
 
@@ -291,23 +291,23 @@ Representa un producto específico adquirido o instalado por un cliente, ya sea 
 
 **¿Qué datos almacena?**
 
-• Nombre 
-• Producto asociado 
-• Cuenta y Contacto 
-• Número de serie 
-• Fechas clave
-• Estado (activo o inactivo)
-• Precio y cantidad 
-• Activo padre 
-• Información de propiedad
+- Nombre 
+- Producto asociado 
+- Cuenta y Contacto 
+- Número de serie 
+- Fechas clave
+- Estado (activo o inactivo)
+- Precio y cantidad 
+- Activo padre 
+- Información de propiedad
 
 **¿Con cuáles se relaciona?**
 
-• Account: Relación obligatoria con la cuenta del cliente. 
-• Contact: Relación opcional con el contacto asociado al activo. 
-• Product: Vinculación con el producto estándar vendido. 
-• Case: Se puede relacionar con un Asset para gestionar soporte técnico del producto. 
-
+- Account: Relación obligatoria con la cuenta del cliente. 
+- Contact: Relación opcional con el contacto asociado al activo. 
+- Product: Vinculación con el producto estándar vendido. 
+- Case: Se puede relacionar con un Asset para gestionar soporte técnico del producto.
+  
 #### Case
 
 **¿Qué es?**
@@ -316,19 +316,19 @@ Es el objeto diseñado para gestionar todas las interacciones de los clientes co
 
 **¿Qué datos almacena?**
 
-•	Información del caso 
-•	Datos del cliente 
-•	Detalles operativos
-•	Asignación: Agente de soporte asignado,
-•	Historial de interacciones
-•	Automatización: Campos para reglas de asignación
+-	Información del caso 
+-	Datos del cliente 
+-	Detalles operativos
+-	Asignación: Agente de soporte asignado,
+-	Historial de interacciones
+-	Automatización: Campos para reglas de asignación
 
 **¿Con cuáles se relaciona?**
 
-• Account: El caso está vinculado a la cuenta del cliente.
-• Contact: El caso se asocia con una persona específica del cliente.
-• Asset: Permite vincular el caso a un producto o activo específico vendido al cliente.
-• Article: pueden vincular artículos de la base de conocimiento al caso para resolver consultas.
+- Account: El caso está vinculado a la cuenta del cliente.
+- Contact: El caso se asocia con una persona específica del cliente.
+- Asset: Permite vincular el caso a un producto o activo específico vendido al cliente.
+- Article: pueden vincular artículos de la base de conocimiento al caso para resolver consultas.
 
 #### Article
 
@@ -338,22 +338,22 @@ Permite a las organizaciones crear, organizar y distribuir contenido de conocimi
 
 **¿Qué datos almacena?**
 
-•	Título del artículo
-•	Cuerpo del contenido (texto, HTML o formatos ricos)
-•	Estado (borrador, revisión, publicado, archivado)
-•	Versión del artículo
-•	Idioma
-•	Categorías y etiquetas para clasificación
-•	Fecha de creación y modificación
-•	Autor o creador del artículo
-•	Campos personalizados (como prioridad, producto asociado, etc.)
-•	Relaciones con otros objetos, como Casos, Contactos o Cuentas
-
+-	Título del artículo
+-	Cuerpo del contenido (texto, HTML o formatos ricos)
+-	Estado (borrador, revisión, publicado, archivado)
+-	Versión del artículo
+-	Idioma
+-	Categorías y etiquetas para clasificación
+-	Fecha de creación y modificación
+-	Autor o creador del artículo
+-	Campos personalizados (como prioridad, producto asociado, etc.)
+-	Relaciones con otros objetos, como Casos, Contactos o Cuentas
+  
 **¿Con cuáles se relaciona?**
 
-• Case: Los artículos de conocimiento se vinculan frecuentemente a casos para ayudar a los agentes a resolver consultas. 
-• Contact : Si un caso está relacionado con un contacto y ese caso usa artículos, entonces hay una conexión indirecta. 
-• Account: La relación es indirecta a través de Case o Asset, si el caso asociado pertenece a una cuenta.
+- Case: Los artículos de conocimiento se vinculan frecuentemente a casos para ayudar a los agentes a resolver consultas. 
+- Contact : Si un caso está relacionado con un contacto y ese caso usa artículos, entonces hay una conexión indirecta. 
+- Account: La relación es indirecta a través de Case o Asset, si el caso asociado pertenece a una cuenta.
 
 #### Diagrama UML – Relaciones entre objetos Salesforce
 
