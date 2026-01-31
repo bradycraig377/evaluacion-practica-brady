@@ -132,6 +132,24 @@ En la tercera solicitud GET, después de realizar el POST, la respuesta incluye 
 
 ---
 
+## Ejercicio 4 – Trailhead
+
+En este ejercicio se realizó la configuración del idioma de Trailhead a **inglés**, con el objetivo de trabajar los módulos en el mismo idioma solicitado.
+
+Posteriormente, se completaron los siguientes módulos de Trailhead utilizando el mismo Playground, excepto en los casos donde el módulo solicitó crear uno nuevo:
+
+- Fundamento de la plataforma Salesforce  
+- Fundamentos de Apex y .NET  
+- Modelado de datos  
+- Fundamentos y base de datos de Apex  
+- Desencadenadores de Apex  
+- Apex Integration Services  
+
+Para la validación de este ejercicio, se comparte a continuación la URL del perfil público de Trailhead donde se pueden consultar los módulos completados:
+
+https://www.salesforce.com/trailblazer/schbof5uep6fv58y93
+
+---
 ## Ejercicio 5 – Objetos estándar de Salesforce
 
 En este ejercicio se describe, de forma conceptual, qué información almacena cada objeto estándar de Salesforce y cómo se relacionan entre sí dentro del modelo de datos.
