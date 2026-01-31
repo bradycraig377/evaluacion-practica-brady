@@ -401,15 +401,27 @@ La respuesta devuelve un conjunto de registros en formato JSON, donde cada conta
 está identificado por un **ID único generado por Firebase**.  
 Este ID será utilizado para consultar un contacto específico.
 
-#### GET inicial (request)
+**##### GET inicial (request)
 ![GET inicial request](imagenes/get-inicial2-request.png)
 
-#### GET inicial (response)
+##### GET inicial (response)
 ![GET inicial response](imagenes/get-inicial2-response.png)
 
+Posteriormente, se consultó un registro individual utilizando uno de los IDs obtenidos en la llamada anterior.
 
-Posteriormente, se consultó un registro individual utilizando uno de los IDs obtenidos
-en la llamada anterior.  
 Ejemplo de ID utilizado:
+- OjhsbYKoWnIHws2C4iZ
+
+##### GET por ID
+![GET por ID](imagenes/get-por-id.png)
+
+**URL utilizada:**
+
+https://procontacto-reclutamiento-default-rtdb.firebaseio.com/contacts/-OjhsbYKoWnIHws2C4iZ.json
+
+La respuesta devuelve únicamente los datos del contacto asociado al ID consultado.
+
+
+
 
 
