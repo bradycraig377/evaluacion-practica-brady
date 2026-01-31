@@ -147,6 +147,7 @@ Las relaciones se representan en un diagrama UML realizado en Draw.io, el cual s
 Es un registro en donde el cliente ha mostrado interés en un producto o servicio de la empresa. Esta diseñado para gestionar a los prospectos desde su primera interacción con la marca hasta que se convierten en clientes.
 
 **¿Qué datos almacena?**
+
 -	Nombre completo 
 -	Información de contacto
 -	Ubicación
@@ -157,6 +158,7 @@ Es un registro en donde el cliente ha mostrado interés en un producto o servici
 -	Notas adicionales y campos personalizados 
 
 **¿Con cuáles se relaciona?**
+
 Tiene relación indirecta con: 
 - Account: Durante la conversión, el lead se transforma en una cuenta (empresa). 
 -	Contact: Los datos personales del lead se convierten en un contacto. 
@@ -164,9 +166,11 @@ Tiene relación indirecta con:
 
 #### Account
 **¿Qué es?**
+
 Es el objeto que representa una cuenta individual, ya sea de una organización, cliente, competidor o socio. Ayuda a gestionar las entidades dentro de la plataforma.
 
 **¿Qué datos almacena?**
+
 -	Nombre de la empresa (razón social)
 	Dirección postal
 -	Ciudad, país y código postal
@@ -175,6 +179,7 @@ Es el objeto que representa una cuenta individual, ya sea de una organización, 
 -	Industria y tamaño de la empresa
 
 **¿Con cuáles se relaciona?**
+
 - Contact: Un contacto está asociado a una cuenta. 
 - Opportunity: Una oportunidad pertenece a una cuenta. 
 - Asset: Un Activo está vinculado a una cuenta. 
@@ -182,8 +187,11 @@ Es el objeto que representa una cuenta individual, ya sea de una organización, 
 
 #### Contact
 **¿Qué es?**
+
 Es un objeto estándar que representa a personas con las que la organización tiene una relación comercial.
+
 **¿Qué datos almacena?**
+
 -	Nombre completo 
 -	Información de contacto
 -	Cargo o título 
@@ -192,6 +200,7 @@ Es un objeto estándar que representa a personas con las que la organización ti
 -	Campos personalizados
 
 **¿Con cuáles se relaciona?**
+
 - Account: Cada contacto está vinculado a una cuenta mediante un campo de búsqueda.
 - Opportunity: Permite definir el rol de un contacto en una oportunidad
 - Quote: Puede estar relacionado indirectamente a través de una opportunity si la cotización está ligada a una oportunidad que incluye contactos.
@@ -199,10 +208,13 @@ Es un objeto estándar que representa a personas con las que la organización ti
 - Case:  Un caso se asocia a un contacto para gestionar soporte.
 
 #### Opportunity
+
 **¿Qué es?**
+
 Es un objeto estándar que representa una venta potencial o un trato pendiente con un cliente
 
 **¿Qué datos almacena?**
+
 -	Nombre de la oportunidad
 -	Monto (Amount): 
 -	Fecha de cierre (Close Date): 
@@ -222,7 +234,9 @@ Es un objeto estándar que representa una venta potencial o un trato pendiente c
 -	Product: Los productos se agregan a una oportunidad a través de Opportunity Products que representan los ítems específicos que se están vendiendo.
 
 #### Product
+
 **¿Qué es?**
+
 Representa los productos o servicios que una empresa vende.
 
 **¿Qué datos almacena?**
@@ -248,6 +262,7 @@ Representa los productos o servicios que una empresa vende.
 #### PriceBook
 
 **¿Qué es?**
+
 Es un catálogo que contiene una lista de productos junto con sus precios asociados.  Permite a las empresas gestionar diferentes precios para los mismos productos según segmentos de clientes, regiones, monedas o estrategias comerciales. 
 
 **¿Qué datos almacena?**
@@ -266,9 +281,11 @@ Es un catálogo que contiene una lista de productos junto con sus precios asocia
 #### Quote
 
 **¿Qué es?**
+
 Es un registro que muestra los precios propuestos para productos y servicios. 
 
 **¿Qué datos almacena?**
+
 -	Datos generales 
 -	Relaciones clave 
 -	Detalles financieros
@@ -288,6 +305,7 @@ Es un registro que muestra los precios propuestos para productos y servicios.
 #### Asset
 
 **¿Qué es?**
+
 Representa un producto específico adquirido o instalado por un cliente, ya sea de la empresa o de un competidor.
 
 **¿Qué datos almacena?**
