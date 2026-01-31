@@ -560,7 +560,7 @@ obtenidos en la llamada anterior, con el objetivo de consultar un contacto espec
 
 **URL utilizada:**
 
-https://procontacto-reclutamiento-default-rtdb.firebaseio.com/contacts/-OjhbsYKoWnIHws2C4iZ.json
+https://procontacto-reclutamiento-default-rtdb.firebaseio.com/contacts/OjhbsYKoWnIHws2C4iZ.json
 
 ##### GET por ID
 ![GET por ID](imagenes/get-por-id.png)
