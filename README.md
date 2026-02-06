@@ -551,7 +551,7 @@ La respuesta muestra un listado de contactos en formato JSON.
 Cada registro contiene un identificador único que será utilizado posteriormente para consultar un contacto en específico.
 
 Ejemplo de ID utilizado:
-- OjhsbYKoWnIHws2C4iZ
+- -Ok62XXuiJVi-aMU7pb_
 
 ### B. Consulta de contacto por ID
 
@@ -570,24 +570,18 @@ La respuesta devuelve únicamente la información del contacto asociado al ID co
 
 ### C. Actualización de Contact mediante Trigger y consumo REST
 
-Para completar la integración, se desarrollaría un **trigger en Salesforce** que se ejecute al **crear o modificar un Contact**.
+Para completar la integración, se implementó un **trigger** en Salesforce que se ejecuta al **crear o modificar** un Contact.
 
-Cuando el campo **idprocontacto** es completado, el trigger invoca un servicio REST externo para consultar la información del contacto utilizando dicho ID.
+Debido a que **Salesforce no permite callouts HTTP directamente desde triggers**, el trigger **NO realiza el callout**. En su lugar:
 
+- Valida que el campo **idprocontacto__c** tenga un valor.
+- Encola un proceso asíncrono **Queueable Apex** (`ProContactoEmailJob`).
+- El **Queueable** realiza el **callout REST** a Firebase (`/contacts/{id}.json`).
+- Se obtiene el **email** desde la respuesta y se actualiza el campo **Email** del Contact.
 
-El trigger realiza las siguientes acciones:
-
-- Detecta la creación o actualización de un Contact.
-- Valida que el campo **idprocontacto** tenga un valor.
-- Realiza un **callout REST** al servicio externo de Firebase.
-- Obtiene la información del contacto (correo electrónico).
-- Actualiza el campo **Email** del Contact con el dato obtenido.
-
-El servicio REST utilizado corresponde a una consulta por ID,
-agregando el identificador del contacto al final de la URL, por ejemplo:
-
+Servicio REST consultado por ID (ejemplo):
 https://procontacto-reclutamiento-default-rtdb.firebaseio.com/contacts/{id}.json
 
-Para las pruebas del trigger se utilizó el **Playground 1**, empleando un ID previamente obtenido mediante Postman, lo que permitió validar el correcto consumo del servicio REST y la actualización del campo de correo electrónico.
+Para las pruebas se utilizó el Playground 1, empleando un ID obtenido previamente mediante Postman, validando el consumo del servicio REST y la actualización automática del campo Email.
 
 
